@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: SwitchyOmega 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-13 10:29+0000\n"
-"PO-Revision-Date: 2016-06-05 03:53+0000\n"
+"PO-Revision-Date: 2019-05-14 08:49+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål "
-"<https://hosted.weblate.org/projects/switchyomega/main/nb_NO/>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"switchyomega/main/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.7-dev\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 msgid "appNameShort"
 msgstr "SwitchyOmega"
@@ -37,19 +37,19 @@ msgid "profile_system"
 msgstr "[Systemmellomtjener]"
 
 msgid "condition_HostWildcardCondition"
-msgstr ""
+msgstr "Vertsjokertegn"
 
 msgid "condition_help_HostWildcardCondition"
 msgstr ""
 
 msgid "condition_HostRegexCondition"
-msgstr ""
+msgstr "Regulært uttrykk for vert"
 
 msgid "condition_help_HostRegexCondition"
 msgstr ""
 
 msgid "condition_HostLevelsCondition"
-msgstr ""
+msgstr "Vertsnivåer"
 
 msgid "condition_help_HostLevelsCondition"
 msgstr ""
@@ -69,7 +69,7 @@ msgstr ""
 "<b>not</b> IP literals."
 
 msgid "condition_UrlWildcardCondition"
-msgstr ""
+msgstr "Nettadressejokertegn"
 
 msgid "condition_help_UrlWildcardCondition"
 msgstr ""
@@ -114,8 +114,18 @@ msgstr "Ukedag"
 msgid "condition_help_WeekdayCondition"
 msgstr ""
 
-msgid "condition_group_default"
+msgid "condition_alert_fullUrlLimitation"
 msgstr ""
+"Full URL matching is no longer possible for <code>https://</code> "
+"URLs as of Chrome 52. "
+"<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Limitation'>"
+"Learn more...</a>"
+
+msgid "condition_alert_fullUrlLimitationLink"
+msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Limitation"
+
+msgid "condition_group_default"
+msgstr " "
 
 msgid "condition_group_host"
 msgstr "Vert"
@@ -130,7 +140,7 @@ msgid "ruleListFormat_Switchy"
 msgstr "Byttende"
 
 msgid "ruleListFormat_AutoProxy"
-msgstr ""
+msgstr "AutoProxy"
 
 msgid "ruleList_usageUrl"
 msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage"
@@ -171,6 +181,9 @@ msgstr "Gjenopprett"
 msgid "options_title"
 msgstr "SwitchyOmega-valg"
 
+msgid "options_experimental_badge"
+msgstr "α"
+
 msgid "options_navHeader_setting"
 msgstr "Innstillinger"
 
@@ -196,7 +209,7 @@ msgid "options_apply"
 msgstr "Legg til endringer"
 
 msgid "options_discard"
-msgstr ""
+msgstr "Forkast endringer"
 
 msgid "options_reset"
 msgstr "Tilbakestill valg"
@@ -212,6 +225,9 @@ msgstr "Gjenoppfrisk gjeldende fane ved profilendring."
 
 msgid "options_showInspectMenu"
 msgstr ""
+
+msgid "options_addConditionsToBottom"
+msgstr "Put new conditions added using the popup to the bottom of the list."
 
 msgid "options_group_keyboardShortcut"
 msgstr "Tastatursnarvei"
@@ -256,10 +272,44 @@ msgid "options_notCycledProfiles"
 msgstr ""
 
 msgid "options_group_proxyChanges"
-msgstr ""
+msgstr "Mellomtjenerendringer"
 
 msgid "options_revertProxyChanges"
+msgstr "Tilbakestill mellomtjenerinnstillinger gjort av andre programmer."
+
+msgid "options_group_conflicts"
+msgstr "Conflicts"
+
+msgid "options_conflicts_introduction"
 msgstr ""
+"Sometimes, other apps will also try to control the proxy settings, resulting "
+"in conflicts. Note that ad blockers and other extensions may also use proxy "
+"settings under the hood. Such conflicts cannot be avoided due to how the "
+"browser works."
+
+msgid "options_conflicts_lowerPriority"
+msgstr ""
+"A red badge like this on the SwitchyOmega icon indicates that another app has "
+"higher priority so SwitchyOmega cannot control the settings. Please try to "
+"uninstall SwitchyOmega and reinstall, which should raise SwitchyOmega's "
+"priority. If you still see conflicts after reinstallation, please consider "
+"removing the other app causing the conflict."
+
+msgid "options_conflicts_higherPriority"
+msgstr ""
+"If SwitchyOmega has higher priority, you can give the control back to other "
+"apps or system settings by selecting $SYSTEMPROFILE$ in the popup menu."
+
+msgid "options_showExternalProfile"
+msgstr "Show popup menu item to import proxy settings from other apps."
+
+msgid "options_showExternalProfileHelp"
+msgstr ""
+"When $SYSTEMPROFILE$ is selected, you can import the effective proxy settings "
+"from other apps by selecting $EXTERNALPROFILE$ on the popup menu. "
+"The settings will be imported as a profile using the name you provide. "
+"Please note that the imported profile is a snapshot and will not reflect "
+"any changes from the source app thereafter."
 
 msgid "options_group_networkRequests"
 msgstr "Nettverksforespørsler"
@@ -274,7 +324,7 @@ msgid "options_downloadOptions"
 msgstr "Nedlastingsvalg"
 
 msgid "options_downloadOptionsHelp"
-msgstr ""
+msgstr "Sett oppdateringsfrekvensen for nettbaserte regellister og PAC-skript."
 
 msgid "options_downloadInterval"
 msgstr "Nedlastingsintervall"
@@ -440,6 +490,11 @@ msgstr "Port"
 msgid "options_proxy_auth"
 msgstr "Identitetsbekreftelse"
 
+msgid "options_proxy_authNotSupported"
+msgstr "Your browser DOES NOT support $PROTOCOLDISP$ proxy authentication! "
+"Please do not report this issue to SwitchyOmega. Contact the support for "
+"your browser instead."
+
 #, fuzzy
 msgid "options_proxy_authAllWarningPac"
 msgstr ""
@@ -568,13 +623,16 @@ msgid "options_resultProfile"
 msgstr ""
 
 msgid "options_conditionActions"
-msgstr ""
+msgstr "Handlinger"
 
 msgid "options_addCondition"
 msgstr ""
 
 msgid "options_cloneRule"
 msgstr ""
+
+msgid "options_ruleNote"
+msgstr "Note"
 
 msgid "options_switchAttachedProfileInCondition"
 msgstr ""
@@ -723,6 +781,12 @@ msgstr "Brukernavn"
 
 msgid "options_proxyAuthPassword"
 msgstr "Passord"
+
+msgid "options_proxyAuthShowPassword"
+msgstr "Show password"
+
+msgid "options_proxyAuthHidePassword"
+msgstr "Hide password"
 
 msgid "options_proxyAuthNone"
 msgstr "Ingen identitetsbekreftelse"
@@ -960,6 +1024,9 @@ msgstr "Sett opp nettverksoversikt"
 msgid "options_resultProfileForSelectedDomains"
 msgstr "Bruk denne profilen for alle valgte domener"
 
+msgid "options_pac_profile_unsupported_moz"
+msgstr "PAC Profiles WILL NOT work in Mozilla Firefox due to technical limitations!"
+
 msgid "popup_issueTemplate"
 msgstr ""
 "\n"
@@ -1035,3 +1102,35 @@ msgstr ""
 
 msgid "contextMenu_enableQuickSwitch"
 msgstr "Skru på raskt bytte"
+
+msgid "about_title"
+msgstr "About"
+
+msgid "about_app_description"
+msgstr "A proxy configuration tool"
+
+msgid "about_version"
+msgstr "Version $VERSION$"
+
+msgid "about_experimental_warning_moz"
+msgstr "Mozilla Firefox support is highly experimental! If you encounter issues, please report using the buttons below."
+
+msgid "about_disclaimer_networkService"
+msgstr "SwitchyOmega does not provide proxies, VPNs, or other network services."
+
+msgid "about_disclaimer_privacy"
+msgstr "SwitchyOmega does not track you or insert ads into webpages. Please see"
+" our <a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Privacy#english'>privacy policy</a>."
+
+msgid "about_help"
+msgstr "Other questions? Need help with using SwitchyOmega? Please see our "
+"<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/FAQ'>FAQ</a>."
+
+msgid "about_copyright"
+msgstr "Copyright 2012-2017 <a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>The SwitchyOmega Authors</a>. All rights reserved."
+
+msgid "about_credits"
+msgstr "SwitchyOmega is made possible by the <a href='https://github.com/FelisCatus/SwitchyOmega'>SwitchyOmega</a> open source project and other <a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>open source software</a>."
+
+msgid "about_license"
+msgstr "SwitchyOmega is <a href='https://www.gnu.org/philosophy/free-sw.en.html'>free software</a> licensed under <a href='https://www.gnu.org/licenses/gpl.html'>GNU General Public License</a> Version 3 or later."

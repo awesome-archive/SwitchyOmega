@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: SwitchyOmega 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-13 11:05+0000\n"
-"PO-Revision-Date: 2015-02-15 14:52+0200\n"
-"Last-Translator: FelisCatus <shyc2010@gmail.com>\n"
-"Language-Team: Chinese (China) "
-"<https://hosted.weblate.org/projects/switchyomega/main/zh_CN/>\n"
+"PO-Revision-Date: 2019-01-26 01:44+0000\n"
+"Last-Translator: YFdyh000 <yfdyh000@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"switchyomega/main/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 msgid "appNameShort"
 msgstr "SwitchyOmega"
@@ -134,6 +134,15 @@ msgstr ""
 "假设在请求发送时是星期X：如果星期X被勾选，则匹配所有请求。否则不匹配任何请求。<br>"
 "除了日期以外，在匹配过程中不会参考请求的网址或任何其他信息。"
 
+msgid "condition_alert_fullUrlLimitation"
+msgstr ""
+"Chrome 52 起，<code>https://</code>协议下的完整网址无法正常匹配。"
+"<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-%E5%AE%8C%E6%95%B4%E7%BD%91%E5%9D%80%E9%99%90%E5%88%B6'>"
+"更多信息...</a>"
+
+msgid "condition_alert_fullUrlLimitationLink"
+msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-%E5%AE%8C%E6%95%B4%E7%BD%91%E5%9D%80%E9%99%90%E5%88%B6"
+
 msgid "condition_group_default"
 msgstr " "
 
@@ -191,8 +200,11 @@ msgstr "还原"
 msgid "options_title"
 msgstr "SwitchyOmega 选项"
 
+msgid "options_experimental_badge"
+msgstr "测试版"
+
 msgid "options_navHeader_setting"
-msgstr "设定"
+msgstr "设置"
 
 msgid "options_navHeader_profiles"
 msgstr "情景模式"
@@ -233,6 +245,9 @@ msgstr "当更改情景模式时刷新当前标签。"
 msgid "options_showInspectMenu"
 msgstr "右键菜单中，可检查网页元素所使用的代理。"
 
+msgid "options_addConditionsToBottom"
+msgstr "把以弹出菜单创建的规则添加到列表末尾。"
+
 msgid "options_group_keyboardShortcut"
 msgstr "键盘快捷键"
 
@@ -258,7 +273,7 @@ msgid "options_showConditionTypesAdvanced"
 msgstr "显示高级切换条件"
 
 msgid "options_showConditionTypesAdvancedHelp"
-msgstr "启用后，可以使用一些新种类的切换条件，功能强大但难以掌握。对于大多数情况来说，只用基本条件类型就可以满足需求，因此不推荐启用此功能。"
+msgstr "解锁一些新种类的、功能强大的但难以掌握的切换条件。对于大多数情况来说，基本条件类型应该就足够，因此不推荐该选项。"
 
 msgid "options_quickSwitch"
 msgstr "快速切换"
@@ -280,6 +295,35 @@ msgstr "代理设置变化"
 
 msgid "options_revertProxyChanges"
 msgstr "撤消其他扩展对代理的更改。"
+
+msgid "options_group_conflicts"
+msgstr "冲突"
+
+msgid "options_conflicts_introduction"
+msgstr ""
+"有时其他应用也会试图控制代理设置，从而导致冲突。请注意，去广告等其他扩展也可能"
+"利用了代理设置来实现功能。此类冲突是由浏览器的工作原理引起的，所以无法避免。"
+
+msgid "options_conflicts_lowerPriority"
+msgstr ""
+"如果 SwitchyOmega 图标上显示这样的红色徽章，表示另一个应用优先级较高，因此"
+"SwitchyOmega 无法控制代理设置。请尝试卸载 SwitchyOmega 再重新安装，这样可能可"
+"以提高 SwitchyOmega 的优先级。如果重装后您仍然看到冲突，那么请考虑移除那个"
+"导致冲突的应用。"
+
+msgid "options_conflicts_higherPriority"
+msgstr ""
+"如果 SwitchyOmega 的优先级较高，那么您可以在弹出菜单中选择 $SYSTEMPROFILE$ 来"
+"把控制权还给其他应用或系统设置。"
+
+msgid "options_showExternalProfile"
+msgstr "在弹出菜单中显示菜单项，以导入其他应用提供的代理设置。"
+
+msgid "options_showExternalProfileHelp"
+msgstr ""
+"选择了 $SYSTEMPROFILE$ 的情况下，您可以在弹出菜单中选择 $EXTERNALPROFILE$ 来"
+"导入其他应用提供的代理设置。导入的设置将会成为一个新的情景模式，其名称由您决"
+"定。请注意导入的情景模式只是当时的一个快照，导入后不会随着原来的应用更新。"
 
 msgid "options_group_networkRequests"
 msgstr "网络请求"
@@ -455,6 +499,10 @@ msgstr "代理端口"
 msgid "options_proxy_auth"
 msgstr "代理登录"
 
+msgid "options_proxy_authNotSupported"
+msgstr "您的浏览器不支持 $PROTOCOLDISP$ 代理认证！如有问题请联系您的浏览器支持，"
+"请勿反馈此问题给 SwitchyOmega."
+
 msgid "options_proxy_authAllWarningPac"
 msgstr "警告: 用户名密码将会提供给PAC脚本返回的任何服务器，有时目标服务器会出乎您的预料。"
 
@@ -588,6 +636,9 @@ msgstr "添加条件"
 
 msgid "options_cloneRule"
 msgstr "克隆"
+
+msgid "options_ruleNote"
+msgstr "备注"
 
 msgid "options_switchAttachedProfileInCondition"
 msgstr "规则列表规则"
@@ -740,6 +791,12 @@ msgstr "用户名"
 
 msgid "options_proxyAuthPassword"
 msgstr "密码"
+
+msgid "options_proxyAuthShowPassword"
+msgstr "显示密码"
+
+msgid "options_proxyAuthHidePassword"
+msgstr "隐藏密码"
 
 msgid "options_proxyAuthNone"
 msgstr "(无密码)"
@@ -978,6 +1035,9 @@ msgstr "设置网络检测选项"
 msgid "options_resultProfileForSelectedDomains"
 msgstr "对所有选中域名使用此情景模式："
 
+msgid "options_pac_profile_unsupported_moz"
+msgstr "由于技术限制，PAC 情景模式无法在 Mozilla Firefox 上工作！"
+
 msgid "popup_issueTemplate"
 msgstr ""
 "\n"
@@ -1051,3 +1111,35 @@ msgstr "检查此[元素]使用的代理"
 
 msgid "contextMenu_enableQuickSwitch"
 msgstr "启用快速切换"
+
+msgid "about_title"
+msgstr "关于"
+
+msgid "about_app_description"
+msgstr "一个代理设置工具"
+
+msgid "about_version"
+msgstr "版本 $VERSION$"
+
+msgid "about_experimental_warning_moz"
+msgstr "Mozilla Firefox 浏览器支持目前仍处于早期实验阶段！如果您遇到任何问题，请使用下方的按钮进行反馈。"
+
+msgid "about_disclaimer_networkService"
+msgstr "SwitchyOmega 不提供代理服务器、VPN等网络服务。"
+
+msgid "about_disclaimer_privacy"
+msgstr "SwitchyOmega 不会跟踪您的上网记录，不在页面中插入广告。请参见我们的"
+"<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Privacy#%E4%B8%AD%E6%96%87'>隐私政策</a>。"
+
+msgid "about_help"
+msgstr "如有其他问题或者需要帮助，请参考"
+"<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98'>常见问题</a>。"
+
+msgid "about_copyright"
+msgstr "版权所有 2012-2017 <a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>The SwitchyOmega Authors</a>. 保留所有权利。"
+
+msgid "about_credits"
+msgstr "SwitchyOmega 的诞生离不开 <a href='https://github.com/FelisCatus/SwitchyOmega'>SwitchyOmega</a> 开源项目和其他<a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>开源软件</a>。"
+
+msgid "about_license"
+msgstr "SwitchyOmega 是<a href='https://www.gnu.org/philosophy/free-sw.zh-cn.html'>自由软件</a>，使用<a href='https://www.gnu.org/licenses/gpl.html'>GNU General Public License</a> 版本 3 及以上授权。"

@@ -3,21 +3,20 @@ msgstr ""
 "Project-Id-Version: SwitchyOmega 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-13 10:29+0000\n"
-"PO-Revision-Date: 2015-02-26 16:42+0200\n"
-"Last-Translator: Qwilas Windymelt <qwilas@mail.3qe.us>\n"
-"Language-Team: Japanese "
-"<https://hosted.weblate.org/projects/switchyomega/main/ja/>\n"
+"PO-Revision-Date: 2018-10-20 11:32+0000\n"
+"Last-Translator: Yuan Tong <tongyuantongyu@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/switchyomega/"
+"main/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.3-dev\n"
+"X-Generator: Weblate 3.3-dev\n"
 
 msgid "appNameShort"
 msgstr "SwitchyOmega"
 
-#, fuzzy
 msgid "manifest_app_name"
 msgstr "Proxy SwitchyOmega"
 
@@ -128,7 +127,7 @@ msgstr ""
 "the condition type back to the previous type."
 
 msgid "condition_TimeCondition"
-msgstr "Current Time"
+msgstr "現在の時刻"
 
 msgid "condition_help_TimeCondition"
 msgstr ""
@@ -139,7 +138,7 @@ msgstr ""
 "The calculation happens roughly at the moment when the request is sent."
 
 msgid "condition_WeekdayCondition"
-msgstr "Day of the Week"
+msgstr "曜日"
 
 msgid "condition_help_WeekdayCondition"
 msgstr ""
@@ -147,6 +146,16 @@ msgstr ""
 "Day is calculated according to local timezone.<br>"
 "The request and its URL don't matter to this condition. "
 "The result is solely based on the day of the week when the request is sent."
+
+msgid "condition_alert_fullUrlLimitation"
+msgstr ""
+"Full URL matching is no longer possible for <code>https://</code> "
+"URLs as of Chrome 52. "
+"<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Limitation'>"
+"Learn more...</a>"
+
+msgid "condition_alert_fullUrlLimitationLink"
+msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Limitation"
 
 msgid "condition_group_default"
 msgstr " "
@@ -205,6 +214,9 @@ msgstr "復元"
 msgid "options_title"
 msgstr "SwitchyOmega オプション"
 
+msgid "options_experimental_badge"
+msgstr "α"
+
 msgid "options_navHeader_setting"
 msgstr "設定"
 
@@ -246,6 +258,9 @@ msgstr "プロファイルの変更にともなって現在のタブを更新す
 
 msgid "options_showInspectMenu"
 msgstr "Allow inspecting proxy used for page elements via context menu."
+
+msgid "options_addConditionsToBottom"
+msgstr "Put new conditions added using the popup to the bottom of the list."
 
 msgid "options_group_keyboardShortcut"
 msgstr "キーボードショートカット"
@@ -304,6 +319,40 @@ msgstr "Proxy Changes"
 msgid "options_revertProxyChanges"
 msgstr "Revert proxy changes done by other apps."
 
+msgid "options_group_conflicts"
+msgstr "Conflicts"
+
+msgid "options_conflicts_introduction"
+msgstr ""
+"Sometimes, other apps will also try to control the proxy settings, resulting "
+"in conflicts. Note that ad blockers and other extensions may also use proxy "
+"settings under the hood. Such conflicts cannot be avoided due to how the "
+"browser works."
+
+msgid "options_conflicts_lowerPriority"
+msgstr ""
+"A red badge like this on the SwitchyOmega icon indicates that another app has "
+"higher priority so SwitchyOmega cannot control the settings. Please try to "
+"uninstall SwitchyOmega and reinstall, which should raise SwitchyOmega's "
+"priority. If you still see conflicts after reinstallation, please consider "
+"removing the other app causing the conflict."
+
+msgid "options_conflicts_higherPriority"
+msgstr ""
+"If SwitchyOmega has higher priority, you can give the control back to other "
+"apps or system settings by selecting $SYSTEMPROFILE$ in the popup menu."
+
+msgid "options_showExternalProfile"
+msgstr "Show popup menu item to import proxy settings from other apps."
+
+msgid "options_showExternalProfileHelp"
+msgstr ""
+"When $SYSTEMPROFILE$ is selected, you can import the effective proxy settings "
+"from other apps by selecting $EXTERNALPROFILE$ on the popup menu. "
+"The settings will be imported as a profile using the name you provide. "
+"Please note that the imported profile is a snapshot and will not reflect "
+"any changes from the source app thereafter."
+
 msgid "options_group_networkRequests"
 msgstr "Network Requests"
 
@@ -323,25 +372,25 @@ msgid "options_downloadOptionsHelp"
 msgstr "Configure the update frequency of online rule lists and PAC scripts."
 
 msgid "options_downloadInterval"
-msgstr "Download Interval"
+msgstr "更新間隔"
 
 msgid "options_downloadInterval_15"
 msgstr "15 Minutes"
 
 msgid "options_downloadInterval_60"
-msgstr "1 Hour"
+msgstr "1時間"
 
 msgid "options_downloadInterval_180"
-msgstr "3 Hours"
+msgstr "3時間"
 
 msgid "options_downloadInterval_360"
-msgstr "6 Hours"
+msgstr "6時間"
 
 msgid "options_downloadInterval_720"
-msgstr "12 Hours"
+msgstr "12時間"
 
 msgid "options_downloadInterval_1440"
-msgstr "Every day"
+msgstr "每日"
 
 msgid "options_downloadInterval_never"
 msgstr "Never"
@@ -372,7 +421,7 @@ msgstr ""
 "SwitchyOmega for the improvements."
 
 msgid "options_group_importExportSettings"
-msgstr "Settings"
+msgstr "設定"
 
 msgid "options_makeBackup"
 msgstr "Make backup"
@@ -499,6 +548,11 @@ msgstr "Port"
 
 msgid "options_proxy_auth"
 msgstr "Authentication"
+
+msgid "options_proxy_authNotSupported"
+msgstr "Your browser DOES NOT support $PROTOCOLDISP$ proxy authentication! "
+"Please do not report this issue to SwitchyOmega. Contact the support for "
+"your browser instead."
 
 msgid "options_proxy_authAllWarningPac"
 msgstr ""
@@ -661,6 +715,9 @@ msgstr "Add condition"
 
 msgid "options_cloneRule"
 msgstr "Clone"
+
+msgid "options_ruleNote"
+msgstr "Note"
 
 msgid "options_switchAttachedProfileInCondition"
 msgstr "Rule list rules"
@@ -827,6 +884,12 @@ msgstr "Username"
 
 msgid "options_proxyAuthPassword"
 msgstr "Password"
+
+msgid "options_proxyAuthShowPassword"
+msgstr "Show password"
+
+msgid "options_proxyAuthHidePassword"
+msgstr "Hide password"
 
 msgid "options_proxyAuthNone"
 msgstr "No Authentication"
@@ -1109,6 +1172,9 @@ msgstr "Configure Network Monitor"
 msgid "options_resultProfileForSelectedDomains"
 msgstr "Use this profile for all selected domains"
 
+msgid "options_pac_profile_unsupported_moz"
+msgstr "PAC Profiles WILL NOT work in Mozilla Firefox due to technical limitations!"
+
 msgid "popup_issueTemplate"
 msgstr ""
 "\n"
@@ -1183,3 +1249,35 @@ msgstr "Inspect proxy used for this Element"
 
 msgid "contextMenu_enableQuickSwitch"
 msgstr "Enable Quick Switch"
+
+msgid "about_title"
+msgstr "About"
+
+msgid "about_app_description"
+msgstr "A proxy configuration tool"
+
+msgid "about_version"
+msgstr "Version $VERSION$"
+
+msgid "about_experimental_warning_moz"
+msgstr "Mozilla Firefox support is highly experimental! If you encounter issues, please report using the buttons below."
+
+msgid "about_disclaimer_networkService"
+msgstr "SwitchyOmega does not provide proxies, VPNs, or other network services."
+
+msgid "about_disclaimer_privacy"
+msgstr "SwitchyOmega does not track you or insert ads into webpages. Please see"
+" our <a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Privacy#english'>privacy policy</a>."
+
+msgid "about_help"
+msgstr "Other questions? Need help with using SwitchyOmega? Please see our "
+"<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/FAQ'>FAQ</a>."
+
+msgid "about_copyright"
+msgstr "Copyright 2012-2017 <a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>The SwitchyOmega Authors</a>. All rights reserved."
+
+msgid "about_credits"
+msgstr "SwitchyOmega is made possible by the <a href='https://github.com/FelisCatus/SwitchyOmega'>SwitchyOmega</a> open source project and other <a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>open source software</a>."
+
+msgid "about_license"
+msgstr "SwitchyOmega is <a href='https://www.gnu.org/philosophy/free-sw.en.html'>free software</a> licensed under <a href='https://www.gnu.org/licenses/gpl.html'>GNU General Public License</a> Version 3 or later."

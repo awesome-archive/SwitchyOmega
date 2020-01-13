@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: SwitchyOmega 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-13 10:29+0000\n"
-"PO-Revision-Date: 2016-08-21 08:55+0000\n"
-"Last-Translator: ReZa ZaRe <rz.zare@gmail.com>\n"
-"Language-Team: Persian "
-"<https://hosted.weblate.org/projects/switchyomega/main/fa/>\n"
+"PO-Revision-Date: 2019-07-12 09:00+0000\n"
+"Last-Translator: Masoud <mrem71@gmail.com>\n"
+"Language-Team: Persian <https://hosted.weblate.org/projects/switchyomega/"
+"main/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.8-dev\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 msgid "appNameShort"
 msgstr "SwitchyOmega"
@@ -22,10 +22,10 @@ msgstr "پروکسی SwitchyOmega"
 
 msgid "manifest_app_description"
 msgstr ""
-"به راحتی و با سرعت بین پروکسی های خود جابهجا شوید و آنها را مدیریت کنید ."
+"به راحتی و با سرعت بین پروکسی های خود جابه‌جا شوید و آنها را مدیریت کنید."
 
 msgid "manifest_icon_default_title"
-msgstr "درحال بارگذاری .…"
+msgstr "درحال بارگذاری…"
 
 msgid "upgrade_profile_auto"
 msgstr "سوییچ خودکار"
@@ -37,7 +37,7 @@ msgid "profile_system"
 msgstr "[پروکسی سیستم]"
 
 msgid "condition_HostWildcardCondition"
-msgstr "فرانویسه (Wildcard) میزبان"
+msgstr "Wildcard میزبان"
 
 msgid "condition_help_HostWildcardCondition"
 msgstr ""
@@ -73,18 +73,18 @@ msgstr ""
 "دارد."
 
 msgid "condition_IpCondition"
-msgstr "IP Literals"
+msgstr "مجموعه IP Literals"
 
 msgid "condition_help_IpCondition"
 msgstr ""
-"Matches the request if and only if the host is a <b>literal</b> IP address and"
-" in the subnet as specified by <a href='"
-"https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation'>"
-"CIDR notation</a>.<br>For example, given the rule <code>127.0.0.1/16</code>, "
-"it matches all IP addresses like <code>127.0.*.*</code>.<br>"
-"So <code>127.0.0.1</code> matches while <code>127.1.0.0</code> does not. "
-"Host names like <code>localhost</code> will never match because they are "
-"<b>not</b> IP literals."
+"تنها و تنها در صورتی درخواست را قبول میکند اگر <b>دقیقا</b> ای پی آدرس ذکر "
+"شده باشد و در زیر مجموعه مشخش شده در <a href='https://en.wikipedia.org/wiki/"
+"Classless_Inter-Domain_Routing#CIDR_notation'>CIDR notation</a> باشد.<br>\n"
+"برای مثال، در صورت وجود قانون <code>127.0.0.1/16</code>, تمامی آدرس های آی "
+"پی مثل<code>127.0.*.*</code>را میپذیرد.<br>بنابراین <code>127.0.0.1</code> "
+"پذیرفته میشود در حالی که<code>127.1.0.0</code> پذیرفته نمیشود.\n"
+"میزبان هایی مانند <code>localhost</code> هیوچقت پذیرفته نمیشوند بخاطر اینکه "
+"آی پی<b>دقیق</b> نمیباشند."
 
 msgid "condition_UrlWildcardCondition"
 msgstr "فرانویسه ادرس (URL)"
@@ -135,7 +135,6 @@ msgstr ""
 "تمامی تنظیمات خود را حفظ میکنند و در صورت نیاز میتوانید با برگردان نوع آن به "
 "حالت قبلی آن را فعال کنید ."
 
-#, fuzzy
 msgid "condition_TimeCondition"
 msgstr "زمان فعلی"
 
@@ -147,7 +146,6 @@ msgstr ""
 "<b>24-hour</b> format (from <b>0 to 23</b>). <br>"
 "The calculation happens roughly at the moment when the request is sent."
 
-#, fuzzy
 msgid "condition_WeekdayCondition"
 msgstr "روز هفته"
 
@@ -157,6 +155,15 @@ msgstr ""
 "Day is calculated according to local timezone.<br>"
 "The request and its URL don't matter to this condition. "
 "The result is solely based on the day of the week when the request is sent."
+
+msgid "condition_alert_fullUrlLimitation"
+msgstr ""
+"مچ کامل دیگر برای این آدرس از کروم 52 به ممکن نیست. <code>https://</code> . <"
+"a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-"
+"Limitation'>اصلاعات بیشتر...</a>"
+
+msgid "condition_alert_fullUrlLimitationLink"
+msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Limitation"
 
 msgid "condition_group_default"
 msgstr " "
@@ -215,6 +222,9 @@ msgstr "بازگرداندن"
 msgid "options_title"
 msgstr "تنظیمات SwitchyOmega"
 
+msgid "options_experimental_badge"
+msgstr "α"
+
 msgid "options_navHeader_setting"
 msgstr "تنظیمات"
 
@@ -259,6 +269,9 @@ msgstr ""
 "مجوز برای بررسی پروکسی مورد استفاده برای یک المان صفحه در منوی زمنیه ("
 "context menu)."
 
+msgid "options_addConditionsToBottom"
+msgstr "شرایط جدید اضافه شد از طریق پنجره ی pop-up را در انتهای لیست قرار بده."
+
 msgid "options_group_keyboardShortcut"
 msgstr "میانبرهای کیبرد"
 
@@ -287,8 +300,8 @@ msgstr "نمایش حالت های پیشرفته ی شروط"
 
 msgid "options_showConditionTypesAdvancedHelp"
 msgstr ""
-"نوع های جدید پیشرفته اما پیچیده تر از شرط ها را فعال کنید .برای بیشتر حالات "
-"نوع های عادی کافی میباشد ، این گزینه پیشنهاد نمیشود ."
+"نوع‌های جدید پیشرفته اما پیچیده‌تر از شرط‌ها را فعال کنید .برای بیشتر حالات "
+"نوع‌های عادی کافی میباشد ، این گزینه پیشنهاد نمی‌شود."
 
 msgid "options_quickSwitch"
 msgstr "جا به جایی سریع"
@@ -314,6 +327,43 @@ msgstr "تغییر پروکسی"
 
 msgid "options_revertProxyChanges"
 msgstr "بازگرداندن تغییرات پروکسی انجام شده توسط دیگر برنامه ها."
+
+msgid "options_group_conflicts"
+msgstr "تضادها"
+
+msgid "options_conflicts_introduction"
+msgstr ""
+"بعضی اوقات، بقیه برنامه‌ها هم سعی میکنند که تنظیمات پراکسی را کنترل کنند، که "
+"نتیجه آن تضادها در تنظیمات پراکسی است. به این نکته توجه فرمایید که Ad-"
+"blocker ها و دیگر افزونه ها ممکن است از تنظیمات پراکسی در سطح زیرین‌شان "
+"استفاده کنند. این تضادها غیرقابل اجتناب‌اند چرا که این نحوه کارکرد مرورگر "
+"است."
+
+msgid "options_conflicts_lowerPriority"
+msgstr ""
+"وقتی یک نمایانگر قرمز مثل این روی نماد SwitchyOmega نمایان می‌شود این را "
+"نشان میدهد که برنامه دیگری کنترل بیشتری دارد پس SwitchyOmega نمیتواند "
+"تنظیمات را کنترل کند. لطفا SwitchyOmega را دوباره نصب کنید. کاری که بایستی "
+"باعث شود کنترل SwitchyOmega بر تنظیمات بیشتر شود. اگر باز هم تضادهایی در "
+"تنظیمات دیدید، لطفا اقدام به حذف برنامه‌ای که این تضاد را باعث میشود کنید."
+
+msgid "options_conflicts_higherPriority"
+msgstr ""
+"If SwitchyOmega has higher priority, you can give the control back to other "
+"apps or system settings by selecting $SYSTEMPROFILE$ in the popup menu."
+
+msgid "options_showExternalProfile"
+msgstr ""
+"آیتم های منوی pop-up را برای ایمپورت تنظیمات پروکسی از دیگر برنامه ها نمایش "
+"بده."
+
+msgid "options_showExternalProfileHelp"
+msgstr ""
+"When $SYSTEMPROFILE$ is selected, you can import the effective proxy settings "
+"from other apps by selecting $EXTERNALPROFILE$ on the popup menu. "
+"The settings will be imported as a profile using the name you provide. "
+"Please note that the imported profile is a snapshot and will not reflect "
+"any changes from the source app thereafter."
 
 msgid "options_group_networkRequests"
 msgstr "درخواست های شبکه"
@@ -513,6 +563,11 @@ msgstr "پورت"
 msgid "options_proxy_auth"
 msgstr "تصدیق"
 
+msgid "options_proxy_authNotSupported"
+msgstr "Your browser DOES NOT support $PROTOCOLDISP$ proxy authentication! "
+"Please do not report this issue to SwitchyOmega. Contact the support for "
+"your browser instead."
+
 msgid "options_proxy_authAllWarningPac"
 msgstr ""
 "اخطار : نام کاربری / رمز عبور ممکن است برای سرور های غیرمنتظره توسط اسکریپت "
@@ -675,6 +730,9 @@ msgstr "افزودن شرط"
 msgid "options_cloneRule"
 msgstr "کپی"
 
+msgid "options_ruleNote"
+msgstr "Note"
+
 msgid "options_switchAttachedProfileInCondition"
 msgstr "قوانین لیست قوانین"
 
@@ -691,7 +749,7 @@ msgid "options_hostLevelsBetween"
 msgstr "≤ سطوح میزبان ≤"
 
 msgid "options_hourBetween"
-msgstr "≤ current hour ≤"
+msgstr "≤ ساعت کنونی ≤"
 
 msgid "options_weekDayShort_0"
 msgstr "Su"
@@ -836,6 +894,12 @@ msgstr "نام کاربری"
 msgid "options_proxyAuthPassword"
 msgstr "رمز عبور"
 
+msgid "options_proxyAuthShowPassword"
+msgstr "نمایش رمز عبور"
+
+msgid "options_proxyAuthHidePassword"
+msgstr "مخفی کردن رمز عبور"
+
 msgid "options_proxyAuthNone"
 msgstr "بدون تصدیق"
 
@@ -963,20 +1027,21 @@ msgid "options_profileDownloadError"
 msgstr "خطا در حین دانلود داده ی پروفایل !"
 
 msgid "options_profileDownloadError_NetworkError"
-msgstr "A network error occurred when updating."
+msgstr "هنگام به‌روز رسانی خطای در شبکه اینترنت رخ داد."
 
 msgid "options_profileDownloadError_HttpError"
-msgstr "An HTTP error ($STATUS$) occurred when updating."
+msgstr "یک خطای پروتکل HTTP:  ($STATUS$)  حین بروزرسانی رخ داد."
 
 msgid "options_profileDownloadError_HttpNotFoundError"
-msgstr "The Profile URL was not found on the server. Please double-check."
+msgstr "آدرس پروفایل بر روی سرور یافت نشد. لطفا دوباره بررسی کنید."
 
 msgid "options_profileDownloadError_HttpServerError"
-msgstr "The remote server responded with error ($STATUS$) when updating."
+msgstr "سرور ریموت با خطای ($STATUS$) در هنگام بروز رسانی پاسخ داد."
 
 msgid "options_profileDownloadError_ContentTypeRejectedError"
-msgstr "The downloaded data is invalid! "
-"You may open the Profile URL in your browser to inspect it."
+msgstr ""
+"دیتای دانلود شده نامعتبر است! میتوانید آدرس پروفایل را برای بررسی در مرورگر "
+"باز کنید."
 
 msgid "options_downloadProfileNow"
 msgstr "هم اکنون پروفایل را دانلود کنید"
@@ -1125,6 +1190,11 @@ msgstr "تنظیم مانیتور شبکه"
 msgid "options_resultProfileForSelectedDomains"
 msgstr "از این پروفایل برای تمامی دامنه های منتخب استفاده کن"
 
+msgid "options_pac_profile_unsupported_moz"
+msgstr ""
+"نمایه(پروفایل) های PAC در به دلیل محدودیت های تکنیکی در موزیلا فایرفاکس کار "
+"نخواهند کرد!"
+
 msgid "popup_issueTemplate"
 msgstr ""
 "\n"
@@ -1201,3 +1271,49 @@ msgstr "بررسی پروکسی مورد استفاده برای این الما
 
 msgid "contextMenu_enableQuickSwitch"
 msgstr "فعال سازی تغییر سرعتی"
+
+msgid "about_title"
+msgstr "درباره"
+
+msgid "about_app_description"
+msgstr "ابزار پیکربندی پراکسی"
+
+msgid "about_version"
+msgstr "نسخه $VERSION$"
+
+msgid "about_experimental_warning_moz"
+msgstr ""
+"پشتیبانی از فایرفاکس کاملا آزمایشی میباشد! در صورت مواجه با خطا، لطفا از "
+"طریق دکمه ی زیر ما را در جریان بگذارید."
+
+msgid "about_disclaimer_networkService"
+msgstr "SwitchyOmega پروکسی، وی پی ان یا دیگر خدمات شبکه ای فراهم نمیکند."
+
+msgid "about_disclaimer_privacy"
+msgstr "SwitchyOmega does not track you or insert ads into webpages. Please see"
+" our <a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Privacy#english'>privacy policy</a>."
+
+msgid "about_help"
+msgstr ""
+"بازم سوال دارید؟ نیاز به کمک دارید؟ لطفا به صفحه <a href='https://github.com/"
+"FelisCatus/SwitchyOmega/wiki/FAQ'>FAQ</a> مراجعه بفرمایید."
+
+msgid "about_copyright"
+msgstr ""
+"کپی رایت 2012-2017 <a "
+"href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>"
+"نویسندگان The SwitchyOmega </a>. کلیه حقوق محفوظ است، ترجمه شده به فارسی "
+"توسط گودرز جعفری."
+
+msgid "about_credits"
+msgstr ""
+"SwitchyOmega به کمک پروژه ی متن باز <a href='https://github.com/FelisCatus/"
+"SwitchyOmega'>SwitchyOmega</a> و دیگر پروژه های متن باز<a "
+"href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>میسر "
+"شده است</a>."
+
+msgid "about_license"
+msgstr ""
+"SwitchyOmega <a href='https://www.gnu.org/philosophy/free-sw.en.html'>یک نرم "
+"افزار آزاد </a>، تحت لیسانس<a href='https://www.gnu.org/licenses/gpl.html'>"
+"GNU </a> نسخه ی 3 به بعد میباشد."
