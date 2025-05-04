@@ -3,21 +3,20 @@ msgstr ""
 "Project-Id-Version: SwitchyOmega 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-13 10:29+0000\n"
-"PO-Revision-Date: 2015-02-26 16:42+0200\n"
-"Last-Translator: Qwilas Windymelt <qwilas@mail.3qe.us>\n"
-"Language-Team: Japanese "
-"<https://hosted.weblate.org/projects/switchyomega/main/ja/>\n"
+"PO-Revision-Date: 2022-02-18 08:54+0000\n"
+"Last-Translator: Plat <shu_teiei@outlook.jp>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/switchyomega/"
+"main/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.3-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 msgid "appNameShort"
 msgstr "SwitchyOmega"
 
-#, fuzzy
 msgid "manifest_app_name"
 msgstr "Proxy SwitchyOmega"
 
@@ -61,13 +60,12 @@ msgstr "ホストレベル"
 
 msgid "condition_help_HostLevelsCondition"
 msgstr ""
-"Matches the request if and only if the host level in within the given range."
-"<br>Host level is defined as the <b>number of dot-separated segments</b> of "
-"the host (domain name).<br>Example: <code>www.example.com</code> is with a "
-"host level of 3, while <code>internal</code> is of host level 1."
+"ホストレベルが指定された範囲内にある場合にのみ、リクエストに一致します。<br>ホストレベルは、ホスト（ドメイン名）の<b>ドットで区切られたセグメントの"
+"数</b>として定義されます。<br>例：<code>www.example."
+"com</code>のホストレベルは3ですが、<code>internal</code>のホストレベルは1です。"
 
 msgid "condition_IpCondition"
-msgstr "IP Literals"
+msgstr "IPリテラル"
 
 msgid "condition_help_IpCondition"
 msgstr ""
@@ -128,7 +126,7 @@ msgstr ""
 "the condition type back to the previous type."
 
 msgid "condition_TimeCondition"
-msgstr "Current Time"
+msgstr "現在の時刻"
 
 msgid "condition_help_TimeCondition"
 msgstr ""
@@ -139,7 +137,7 @@ msgstr ""
 "The calculation happens roughly at the moment when the request is sent."
 
 msgid "condition_WeekdayCondition"
-msgstr "Day of the Week"
+msgstr "曜日"
 
 msgid "condition_help_WeekdayCondition"
 msgstr ""
@@ -148,6 +146,15 @@ msgstr ""
 "The request and its URL don't matter to this condition. "
 "The result is solely based on the day of the week when the request is sent."
 
+msgid "condition_alert_fullUrlLimitation"
+msgstr ""
+"URL全体のマッチは <code>https://</code> を使用したURLにおいてはChrome 52からできなくなりました。 <a "
+"href='https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-"
+"Limitation'>詳細はこちら</a>"
+
+msgid "condition_alert_fullUrlLimitationLink"
+msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Limitation"
+
 msgid "condition_group_default"
 msgstr " "
 
@@ -155,7 +162,7 @@ msgid "condition_group_host"
 msgstr "ホスト"
 
 msgid "condition_group_url"
-msgstr "Url"
+msgstr "URL"
 
 msgid "condition_group_special"
 msgstr "特別"
@@ -205,6 +212,9 @@ msgstr "復元"
 msgid "options_title"
 msgstr "SwitchyOmega オプション"
 
+msgid "options_experimental_badge"
+msgstr "α"
+
 msgid "options_navHeader_setting"
 msgstr "設定"
 
@@ -247,6 +257,9 @@ msgstr "プロファイルの変更にともなって現在のタブを更新す
 msgid "options_showInspectMenu"
 msgstr "Allow inspecting proxy used for page elements via context menu."
 
+msgid "options_addConditionsToBottom"
+msgstr "Put new conditions added using the popup to the bottom of the list."
+
 msgid "options_group_keyboardShortcut"
 msgstr "キーボードショートカット"
 
@@ -254,9 +267,7 @@ msgid "options_menuShortcutHelp"
 msgstr "ショートカットを押すと切替ポップアップメニューが開きます。(デフォルトではAlt+Shift+O)"
 
 msgid "options_menuShortcutMore"
-msgstr ""
-"The items in the popup menu can also be accessed using the keyboard. Press ? "
-"(or /) in the menu to learn more."
+msgstr "ポップアップメニューの項目は、キーボードを使ってもアクセスすることができます。キーボードの「？」(または「/」) を押して詳細を表示します。"
 
 msgid "options_menuShortcutConfigure"
 msgstr "ショートカットの設定"
@@ -275,12 +286,10 @@ msgstr "高度な条件の種類を表示する"
 
 msgid "options_showConditionTypesAdvancedHelp"
 msgstr ""
-"Unlocks new types of advanced but complicated switch conditions. For most "
-"senarios, the basic condition types should be enough, so this option is not "
-"recommended."
+"新しいタイプの高度で複雑なスイッチ条件のロックを解除します。ほとんどのシナリオでは、基本的な条件タイプで十分であるため、このオプションはお勧めしません。"
 
 msgid "options_quickSwitch"
-msgstr "Quick Switch"
+msgstr "クイック切替"
 
 msgid "options_cycledProfiles"
 msgstr "Cycled Profiles"
@@ -291,9 +300,7 @@ msgstr ""
 "profiles will be applied in their order."
 
 msgid "options_cycledProfilesTooFew"
-msgstr ""
-"You need to select at least 2 profiles to enable this function! You can drag "
-"them from the box below."
+msgstr "この機能を有効にするには最低でも二つのプロファイルを選択する必要があります。下のボックスからアイテムをドラッグすることができます。"
 
 msgid "options_notCycledProfiles"
 msgstr "Not Cycled Profiles"
@@ -303,6 +310,36 @@ msgstr "Proxy Changes"
 
 msgid "options_revertProxyChanges"
 msgstr "Revert proxy changes done by other apps."
+
+msgid "options_group_conflicts"
+msgstr "競合"
+
+msgid "options_conflicts_introduction"
+msgstr ""
+"他のアプリもプロキシ設定を制御しようとするため、競合が発生することがあります。広告ブロッカーやその他の拡張機能も、プロキシ設定を水面下で使用している可能性"
+"があることに気をつけてください。このような競合は、ブラウザの仕組み上、避けることができません。"
+
+msgid "options_conflicts_lowerPriority"
+msgstr ""
+"SwitchyOmegaのアイコンにこのような赤いバッジが表示されるのは、他のアプリの方が優先度が高く、SwitchyOmegaが設定をコントロールできな"
+"いことを示しています。SwitchyOmegaを一度アンインストールして再インストールすると、SwitchyOmegaの優先順位が上がるはずなので、試して"
+"みてください。再インストール後も競合が発生する場合は、競合の原因となっている他のアプリを削除することを検討してください。"
+
+msgid "options_conflicts_higherPriority"
+msgstr ""
+"If SwitchyOmega has higher priority, you can give the control back to other "
+"apps or system settings by selecting $SYSTEMPROFILE$ in the popup menu."
+
+msgid "options_showExternalProfile"
+msgstr "Show popup menu item to import proxy settings from other apps."
+
+msgid "options_showExternalProfileHelp"
+msgstr ""
+"When $SYSTEMPROFILE$ is selected, you can import the effective proxy settings "
+"from other apps by selecting $EXTERNALPROFILE$ on the popup menu. "
+"The settings will be imported as a profile using the name you provide. "
+"Please note that the imported profile is a snapshot and will not reflect "
+"any changes from the source app thereafter."
 
 msgid "options_group_networkRequests"
 msgstr "Network Requests"
@@ -323,25 +360,25 @@ msgid "options_downloadOptionsHelp"
 msgstr "Configure the update frequency of online rule lists and PAC scripts."
 
 msgid "options_downloadInterval"
-msgstr "Download Interval"
+msgstr "更新間隔"
 
 msgid "options_downloadInterval_15"
 msgstr "15 Minutes"
 
 msgid "options_downloadInterval_60"
-msgstr "1 Hour"
+msgstr "1時間"
 
 msgid "options_downloadInterval_180"
-msgstr "3 Hours"
+msgstr "3時間"
 
 msgid "options_downloadInterval_360"
-msgstr "6 Hours"
+msgstr "6時間"
 
 msgid "options_downloadInterval_720"
-msgstr "12 Hours"
+msgstr "12時間"
 
 msgid "options_downloadInterval_1440"
-msgstr "Every day"
+msgstr "每日"
 
 msgid "options_downloadInterval_never"
 msgstr "Never"
@@ -372,7 +409,7 @@ msgstr ""
 "SwitchyOmega for the improvements."
 
 msgid "options_group_importExportSettings"
-msgstr "Settings"
+msgstr "設定"
 
 msgid "options_makeBackup"
 msgstr "Make backup"
@@ -499,6 +536,11 @@ msgstr "Port"
 
 msgid "options_proxy_auth"
 msgstr "Authentication"
+
+msgid "options_proxy_authNotSupported"
+msgstr "Your browser DOES NOT support $PROTOCOLDISP$ proxy authentication! "
+"Please do not report this issue to SwitchyOmega. Contact the support for "
+"your browser instead."
 
 msgid "options_proxy_authAllWarningPac"
 msgstr ""
@@ -662,6 +704,9 @@ msgstr "Add condition"
 msgid "options_cloneRule"
 msgstr "Clone"
 
+msgid "options_ruleNote"
+msgstr "Note"
+
 msgid "options_switchAttachedProfileInCondition"
 msgstr "Rule list rules"
 
@@ -742,15 +787,13 @@ msgid "options_guideDone"
 msgstr "Done"
 
 msgid "options_guideSkip"
-msgstr "Skip guide"
+msgstr "チュートリアルをスキップ"
 
 msgid "options_modalHeader_applyOptions"
-msgstr "Apply Options"
+msgstr "変更を適応"
 
 msgid "options_optionsNotSaved"
-msgstr ""
-"Your modifications to the options have not been saved and will be lost if "
-"you proceed!"
+msgstr "変更点は保存されていないため、このまま続行すると変更は失われます。"
 
 msgid "options_applyOptionsRequired"
 msgstr "Your changes to the options must be applied before you proceed."
@@ -827,6 +870,12 @@ msgstr "Username"
 
 msgid "options_proxyAuthPassword"
 msgstr "Password"
+
+msgid "options_proxyAuthShowPassword"
+msgstr "Show password"
+
+msgid "options_proxyAuthHidePassword"
+msgstr "Hide password"
 
 msgid "options_proxyAuthNone"
 msgstr "No Authentication"
@@ -1109,6 +1158,9 @@ msgstr "Configure Network Monitor"
 msgid "options_resultProfileForSelectedDomains"
 msgstr "Use this profile for all selected domains"
 
+msgid "options_pac_profile_unsupported_moz"
+msgstr "PAC Profiles WILL NOT work in Mozilla Firefox due to technical limitations!"
+
 msgid "popup_issueTemplate"
 msgstr ""
 "\n"
@@ -1183,3 +1235,35 @@ msgstr "Inspect proxy used for this Element"
 
 msgid "contextMenu_enableQuickSwitch"
 msgstr "Enable Quick Switch"
+
+msgid "about_title"
+msgstr "About"
+
+msgid "about_app_description"
+msgstr "A proxy configuration tool"
+
+msgid "about_version"
+msgstr "Version $VERSION$"
+
+msgid "about_experimental_warning_moz"
+msgstr "Mozilla Firefox support is highly experimental! If you encounter issues, please report using the buttons below."
+
+msgid "about_disclaimer_networkService"
+msgstr "SwitchyOmega does not provide proxies, VPNs, or other network services."
+
+msgid "about_disclaimer_privacy"
+msgstr "SwitchyOmega does not track you or insert ads into webpages. Please see"
+" our <a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Privacy#english'>privacy policy</a>."
+
+msgid "about_help"
+msgstr "Other questions? Need help with using SwitchyOmega? Please see our "
+"<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/FAQ'>FAQ</a>."
+
+msgid "about_copyright"
+msgstr "Copyright 2012-2017 <a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>The SwitchyOmega Authors</a>. All rights reserved."
+
+msgid "about_credits"
+msgstr "SwitchyOmega is made possible by the <a href='https://github.com/FelisCatus/SwitchyOmega'>SwitchyOmega</a> open source project and other <a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>open source software</a>."
+
+msgid "about_license"
+msgstr "SwitchyOmega is <a href='https://www.gnu.org/philosophy/free-sw.en.html'>free software</a> licensed under <a href='https://www.gnu.org/licenses/gpl.html'>GNU General Public License</a> Version 3 or later."

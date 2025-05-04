@@ -1,6 +1,6 @@
 angular.module('omega').controller 'SwitchProfileCtrl', ($scope, $rootScope,
   $location, $timeout, $q, $modal, profileIcons, getAttachedName, omegaTarget,
-  trFilter) ->
+  trFilter, downloadFile) ->
   # == Rule list ==
   $scope.ruleListFormats = OmegaPac.Profiles.ruleListFormats
 
@@ -20,7 +20,7 @@ angular.module('omega').controller 'SwitchProfileCtrl', ($scope, $rootScope,
 
     blob = new Blob [text], {type: "text/plain;charset=utf-8"}
     fileName = $scope.profile.name.replace(/\W+/g, '_')
-    saveAs(blob, "OmegaRules_#{fileName}.sorl")
+    downloadFile(blob, "OmegaRules_#{fileName}.sorl")
 
   exportLegacyRuleList = ->
     wildcardRules = ''
@@ -52,7 +52,7 @@ angular.module('omega').controller 'SwitchProfileCtrl', ($scope, $rootScope,
     """
     blob = new Blob [text], {type: "text/plain;charset=utf-8"}
     fileName = $scope.profile.name.replace(/\W+/g, '_')
-    saveAs(blob, "SwitchyRules_#{fileName}.ssrl")
+    downloadFile(blob, "SwitchyRules_#{fileName}.ssrl")
 
   # == Condition types ==
   $scope.conditionHelp =
@@ -116,9 +116,21 @@ angular.module('omega').controller 'SwitchProfileCtrl', ($scope, $rootScope,
 
   $scope.showConditionTypes = 0
   $scope.hasConditionTypes = 0
+  $scope.hasUrlConditions = false
+  $scope.isUrlConditionType =
+    'UrlWildcardCondition': true
+    'UrlRegexCondition': true
+
   updateHasConditionTypes = ->
-    return unless $scope.hasConditionTypes == 0
     return unless $scope.profile?.rules?
+
+    $scope.hasUrlConditions = false
+    for rule in $scope.profile.rules
+      if $scope.isUrlConditionType[rule.condition.conditionType]
+        $scope.hasUrlConditions = true
+        break
+
+    return unless $scope.hasConditionTypes == 0
     for rule in $scope.profile.rules
       # Convert TrueCondition to a HostWildcardCondition with pattern '*'.
       if rule.condition.conditionType == 'TrueCondition'
@@ -184,7 +196,7 @@ angular.module('omega').controller 'SwitchProfileCtrl', ($scope, $rootScope,
     if condition.conditionType.indexOf('Regex') >= 0
       try
         new RegExp(pattern)
-      catch
+      catch _
         return false
     return true
 
@@ -231,6 +243,16 @@ angular.module('omega').controller 'SwitchProfileCtrl', ($scope, $rootScope,
       input = angular.element(".switch-rule-row:nth-child(#{index + 2}) input")
       input[0]?.focus()
       input[0]?.select()
+
+  $scope.showNotes = false
+  $scope.addNote = (index) ->
+    $scope.showNotes = true
+    unwatchRulesShowNote()
+  unwatchRulesShowNote = $scope.$watch 'profile.rules', ((rules) ->
+    if rules and rules.some((rule) -> !!rule.note)
+      $scope.showNotes = true
+      unwatchRulesShowNote()
+  ), true
 
   $scope.resetRules = ->
     scope = $scope.$new('isolate')
